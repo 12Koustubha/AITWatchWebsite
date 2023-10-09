@@ -5,8 +5,8 @@ import HomePage from './components/HomePage'
 import Headset from './components/Headset'
 import ExploreCollection from './components/ExploreCollection'
 import ShoppingCart from './components/ShoppingCart'
-import Footer from './components/Footer'
-import InformationPage from './InformationPage'
+import Achievements from './components/Achievements'
+import Footer from './Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,8 +19,9 @@ function App() {
     <Headset />
     <ExploreCollection />
     <ShoppingCart />
+    <Achievements />
     <Footer />
-    <InformationPage />
+   
    
     </>
   )
