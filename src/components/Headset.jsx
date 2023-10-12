@@ -5,11 +5,11 @@ const Headset = () => {
   return (
     <>
       <div className="flex flex-col">
-        <div
-          className=" flex px-[60px] m-[90px]"
+        <div 
+          className=" flex px-[60px] md:m-[90px] m-[40px] "
           style={{ background: " rgba(229, 231, 231, 0.760)" }}
         >
-          <img src="headset.jpg" alt="Headset" className="w-[80%]" />
+          <img src="headset.jpg" alt="Headset" className="md:w-[80%] w-[40%] " />
           <div className="flex justify-center text-center items-center font-bold text-xl tracking-wider">
             All-in one VR <br />
             Always ready when you are <br />
@@ -18,8 +18,8 @@ const Headset = () => {
             entertainment on thr go with no PC, wires or hassles.
           </div>
         </div>
-        <div className="flex justify-center gap-x-10">
-          <div className="flex flex-col gap-2">
+        <div className="flex justify-center gap-x-10 flex-wrap md:flex-nowrap">
+          <div className="flex flex-col gap-2 ">
             <img src="product-2.jpg" alt="earphone" />
             <div className=" p-6 bg-li border border-transparent " style={{background: "rgba(229, 231, 231, 0.353)"}}>
               <p className="font-bold text-2xl tracking-wider">

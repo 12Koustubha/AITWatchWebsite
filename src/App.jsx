@@ -13,16 +13,16 @@ function App() {
 
   return (
     <>
- 
-    <NavBar />
-    <HomePage />
-    <Headset />
-    <ExploreCollection />
-    <ShoppingCart />
-    <Achievements />
-    <Footer />
-   
-   
+
+      <NavBar />
+      <HomePage />
+      <Headset />
+      <ExploreCollection />
+      <ShoppingCart />
+      <Achievements />
+      <Footer />
+
+
     </>
   )
 }

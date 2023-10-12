@@ -5,7 +5,7 @@ const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const watches = ["Fasttrack", "Samsung", "Titan", "Apple"];
   return (
-    <div className="  flex flex-col w-28 items-center rounded-lg">
+    <div className="flex flex-col w-28 items-center rounded-lg">
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className="px-2 py-[2px] w-full flex items-center justify-between border border-1 border-gray-400 font-semibold tracking-wider text-lg hover:text-blue-600 cursor-pointer"

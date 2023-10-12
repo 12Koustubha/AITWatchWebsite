@@ -8,51 +8,53 @@ import {
 
 const ShoppingCart = () => {
   const countries = ["India", "USA", "Canada", "UK"];
+  const [coverImage, setCoverImage] = useState("thunb-1.jpg");
   const [isOpen, setIsOpen] = useState(false);
+  const imagesArray = [
+    'thunb-1.jpg',
+    'thunb-2.jpg',
+    'thunb-3.jpg',
+    'thunb-4.jpg',
+    'thunb-5.jpg',
+  ]
+  const handleClickImage = (imagePath) => {
+    setCoverImage(imagePath)
+
+  }
 
   return (
     <>
       <div
-        className="flex justify-center  relative w-[80%]  mt-30 my-[50px] mx-auto py-[360px] px-[100px]"
+        className="w-[95%] py-10 items-center mx-5 md:mx-10 mt-10"
         style={{ backgroundColor: "rgba(229, 231, 231, 0.353" }}
       >
-        <div className="absolute top-[60px] flex  flex-col items-center">
+        <div className="flex  flex-col items-center">
           <p className="text-gray-500 text-base font-semibold">
             All in-one VR{" "}
           </p>
           <p className="text-4xl font-bold tracking-wider">Oculus VR</p>
         </div>
-
-        <div className="absolute top-[170px] left-[224px]">
-          <img src="product-3.jpg" alt="earphones" className=" bg-white " />
+        <div className="mt-10">
+          <img src={coverImage} alt="earphones" className=" bg-white mx-auto w-[60%] md:w-[40%]" />
         </div>
-      </div>
-      <div
-        className="flex flex-col gap-y-10  m-[40px] w-[95%]"
-        style={{ backgroundColor: "rgba(229, 231, 231, 0.353" }}
-      >
-        <div className="flex gap-6 justify-center ">
-          <img src="thunb-1.jpg" alt="thumb1" className="mt-10" />
-          <img src="thunb-2.jpg" alt="thumb2" className="mt-10" />
-          <img src="thunb-3.jpg" alt="thumb3" className="mt-10" />
-          <img src="thunb-4.jpg" alt="thumb4" className="mt-10" />
-          <img src="thunb-5.jpg" alt="thumb5" className="mt-10" />
+        <div className="flex gap-3 md:gap-6 justify-center ">
+          {imagesArray.map((ele) => <img src={ele} alt={ele} className="w-[14%]  mt-10 cursor-pointer" onClick={() => handleClickImage(ele)} />)}
         </div>
-        <div className="flex my-0 mx-24 gap-32 mt-10 mb-10">
-          <div className="  flex flex-col">
+        <div className="flex flex-col md:flex-row my-0 mx-24 gap-10 md:gap-32 mt-10 mb-10">
+          <div className="flex flex-col flex-wrap md:flex-nowrap">
             <p className="text-lg text-gray-400 font-medium">All-In-One VR</p>
-            <p className="text-5xl text-black font-bold">Oculus VR</p>
+            <p className="text-2xl md:text-5xl text-black font-bold">Oculus VR</p>
             <div className="text-lg text-gray-400 mt-6">Select your Oculus</div>
-            <div className="flex gap-5">
+            <div className="flex gap-2 md:gap-5">
               <img
                 src="product-items-1.jpg"
                 alt="item1"
-                className="hover: border border-1 border-blue-600 "
+                className="hover: border border-1 border-blue-600 w-[20%]"
               />
-              <img src="product-items-2.jpg" alt="item2" />
-              <img src="product-items-3.jpg" alt="item3" />
+              <img src="product-items-2.jpg" alt="item2" className="w-[20%]"/>
+              <img src="product-items-3.jpg" alt="item3" className="w-[20%]"/>
             </div>
-            <div className="mt-8 flex gap-5 text-gray-700 text-sm font-semibold justify-between">
+            <div className="mt-3 md:mt-8 flex flex-col md:flex-row gap-5 text-gray-700 text-sm font-semibold justify-between">
               <div className="flex flex-col">
                 Select color:Grey
                 <div className="flex gap-2 mt-2">
@@ -112,7 +114,7 @@ const ShoppingCart = () => {
             </div>
           </div>
 
-          <div className="flex flex-col w-[20%] gap-[18px] mt-[112px]">
+          <div className="flex flex-col w-full md:w-[60%] gap-[18px] md:mt-[112px] flex-wrap md:flex-nowrap">
             <p className="text-xs font-medium text-black">Price:</p>
             <div className="flex gap-2">
               <span className="text-2xl font-bold tracking-wider">
@@ -122,7 +124,7 @@ const ShoppingCart = () => {
                 $ 179 USD
               </span>
             </div>
-            <div className="flex justify-between">
+            <div className="flex gap-x-4 ">
               <button
                 type="button"
                 onclick=""
@@ -144,7 +146,7 @@ const ShoppingCart = () => {
                   <span className="flex items-center">
                     <AiOutlineShoppingCart className="w-5 h-5" />{" "}
                   </span>{" "}
-                 Buy Now
+                  Buy Now
                 </div>
               </button>
             </div>
